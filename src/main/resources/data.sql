@@ -1,4 +1,4 @@
-
+/*
 -- Insert Users
 INSERT INTO Users (username, password_hash, role)
 VALUES
@@ -16,4 +16,6 @@ VALUES
 INSERT INTO Blocks (name, max_rooms) VALUES
      ('A', 40), ('B', 40), ('C', 40), ('D', 40),
      ('E', 20), ('F', 20), ('G', 20);
+
+ */
 

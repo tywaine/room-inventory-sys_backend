@@ -1,9 +1,12 @@
 -- Drop existing tables if they exist
+/*
 DROP TABLE IF EXISTS Furniture;
 DROP TABLE IF EXISTS Occupants;
 DROP TABLE IF EXISTS Rooms;
 DROP TABLE IF EXISTS Blocks;
 DROP TABLE IF EXISTS Users;
+
+ */
 
 
 -- Users Table
