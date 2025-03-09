@@ -35,6 +35,7 @@ public class BlockController {
         return blockService.getBlocks();
     }
 
+    /*
     @PostMapping
     public ResponseEntity<Block> registerNewBlock(@RequestBody Block block) {
         try {
@@ -73,4 +74,6 @@ public class BlockController {
         blockService.updateBlock(blockID, name, maxRooms);
         return new ResponseEntity<>("Block updated successfully", HttpStatus.OK);
     }
+
+     */
 }

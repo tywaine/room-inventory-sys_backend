@@ -34,6 +34,7 @@ public class RoomController {
         return roomService.getRooms();
     }
 
+    /*
     @PostMapping
     public ResponseEntity<Room> registerNewOccupant(@RequestBody Room room) {
         try {
@@ -74,4 +75,6 @@ public class RoomController {
         roomService.updateRoom(roomID, blockID, roomNumber, floor, maxOccupants);
         return new ResponseEntity<>("Room updated successfully", HttpStatus.OK);
     }
+
+     */
 }
