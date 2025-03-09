@@ -1,12 +1,9 @@
 -- Drop existing tables if they exist
-/*
-DROP TABLE IF EXISTS Furniture;
-DROP TABLE IF EXISTS Occupants;
-DROP TABLE IF EXISTS Rooms;
-DROP TABLE IF EXISTS Blocks;
-DROP TABLE IF EXISTS Users;
-
- */
+-- DROP TABLE IF EXISTS Furniture;
+-- DROP TABLE IF EXISTS Occupants;
+-- DROP TABLE IF EXISTS Rooms;
+-- DROP TABLE IF EXISTS Blocks;
+-- DROP TABLE IF EXISTS Users;
 
 
 -- Users Table
@@ -17,8 +14,6 @@ CREATE TABLE IF NOT EXISTS Users (
     role ENUM('ADMIN', 'STAFF') NOT NULL DEFAULT 'STAFF',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
-
 
 CREATE TABLE IF NOT EXISTS Blocks (
     blockID INT AUTO_INCREMENT PRIMARY KEY,
