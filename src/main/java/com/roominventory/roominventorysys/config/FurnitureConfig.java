@@ -22,14 +22,14 @@ public class FurnitureConfig {
                 List<Furniture> furnitureList = new ArrayList<>();
 
                 for (int roomId = 1; roomId <= 220; roomId++) {
-                    furnitureList.add(new Furniture(roomId, "Bed", "Good"));
-                    furnitureList.add(new Furniture(roomId, "Mattress", "Good"));
-                    furnitureList.add(new Furniture(roomId, "Desk", "Good"));
-                    furnitureList.add(new Furniture(roomId, "Chair", "Good"));
-                    furnitureList.add(new Furniture(roomId, "Wardrobe", "Good"));
-                    furnitureList.add(new Furniture(roomId, "Bookshelf", "Good"));
-                    furnitureList.add(new Furniture(roomId, "Table", "Good"));
-                    furnitureList.add(new Furniture(roomId, "Couch", "Good"));
+                    if(roomId <= 160){
+                        addFurniture(furnitureList, roomId);
+                    }
+                    else{
+                        addFurniture(furnitureList, roomId);
+                        addFurniture(furnitureList, roomId);
+                    }
+
                     furnitureRepository.saveAll(furnitureList);
                     System.out.println("Furniture added to room " + roomId + " in furnitureList");
                     furnitureList.clear();
@@ -41,7 +41,17 @@ public class FurnitureConfig {
                 System.out.println("Furniture table already populated. Skipping initialization.");
             }
         };
+    }
 
-
+    private void addFurniture(List<Furniture> furnitureList, Integer roomId) {
+        furnitureList.add(new Furniture(roomId, "Easy Chair", "GOOD"));
+        furnitureList.add(new Furniture(roomId, "Bed", "GOOD"));
+        furnitureList.add(new Furniture(roomId, "Mattress", "GOOD"));
+        furnitureList.add(new Furniture(roomId, "Closet", "GOOD"));
+        furnitureList.add(new Furniture(roomId, "Study Table", "GOOD"));
+        furnitureList.add(new Furniture(roomId, "Study Chair", "GOOD"));
+        furnitureList.add(new Furniture(roomId, "Wall", "GOOD"));
+        furnitureList.add(new Furniture(roomId, "Chest of Draws", "GOOD"));
+        furnitureList.add(new Furniture(roomId, "Window", "GOOD"));
     }
 }
