@@ -26,7 +26,8 @@ public class OccupantController {
 
             if (occupant.isPresent()) {
                 return List.of(occupant.get());
-            } else {
+            }
+            else {
                 return new ArrayList<>();
             }
         }

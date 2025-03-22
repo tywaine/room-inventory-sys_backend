@@ -8,7 +8,7 @@ VALUES
     ('vanessa', '$2a$12$UtUqoI8OMIfu9GT3CBXhU.0ZH5XUPns.vRn5gs1pWcJ9PsSVnnEUO', 'ADMIN'),
     ('ron-hugh', '$2a$12$MBgRIzBXJx6eR1P3fatwquGH4Vw9SKCju/EDo.71UbSLUN2ohAh1a', 'ADMIN'),
     ('chev', '$2a$12$56SKSL5zAn4NEGNeRhMFcOUKzQcvoRsUXVypHjL2fOGnGrLHiAtBO', 'ADMIN'),
-    ('leah-jay', '$2a$12$MBgRIzBXJx6eR1P3fatwquGH4Vw9SKCju/EDo.71UbSLUN2ohAh1a', 'ADMIN'),
+    ('leah-jay', '$2a$12$6uDiLm149lq1ih0CkYtoSeCseDcI9QZpQ5PkBli4CRuDUVgep2eha', 'ADMIN'),
     ('staff1', '$2a$12$/YTKoIJ2ky2.DslSNg73tON793DWt9bTjNSYfFXZCKoIfvzraBzvO', 'STAFF');
 
 
