@@ -25,8 +25,7 @@ CREATE TABLE IF NOT EXISTS Blocks (
 CREATE TABLE IF NOT EXISTS Rooms (
     roomID INT AUTO_INCREMENT PRIMARY KEY,
     blockID INT NOT NULL,
-    room_number VARCHAR(4) UNIQUE NOT NULL,  -- A101, B202, etc.
-    floor INT NOT NULL,                      -- Floor number extracted from room_number
+    room_number VARCHAR(4) UNIQUE NOT NULL,  -- A1, A40, etc.
     max_occupants INT NOT NULL CHECK (max_occupants IN (1, 2)),
     FOREIGN KEY (blockID) REFERENCES Blocks(blockID) ON DELETE CASCADE
     );

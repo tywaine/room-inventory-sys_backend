@@ -34,11 +34,9 @@ public class RoomConfig {
                     int maxRooms = blockInfo.get(blockID)[0];
                     int maxOccupants = blockInfo.get(blockID)[1];
 
-                    for (int floor = 1; floor <= maxRooms / 10; floor++) {
-                        for (int roomNum = 1; roomNum <= 10; roomNum++) {
-                            String roomNumber = getRoomNumber(blockID, floor, roomNum);
-                            rooms.add(new Room(blockID, roomNumber, floor, maxOccupants));
-                        }
+                    for (int roomNum = 1; roomNum <= maxRooms; roomNum++) {
+                        String roomNumber = getRoomNumber(blockID, roomNum);
+                        rooms.add(new Room(blockID, roomNumber, maxOccupants));
                     }
                 }
 
@@ -51,8 +49,8 @@ public class RoomConfig {
         };
     }
 
-    private String getRoomNumber(Integer blockID, int floor, int roomNum) {
+    private String getRoomNumber(Integer blockID, int roomNum) {
         char blockLetter = (char) ('A' + (blockID - 1)); // Convert block ID to letter
-        return blockLetter + String.format("%d%02d", floor, roomNum);
+        return blockLetter + String.valueOf(roomNum);
     }
 }

@@ -23,16 +23,12 @@ public class Room {
     @Column("room_number")
     private String roomNumber;
 
-    @Column("floor")
-    private Integer floor;
-
     @Column("max_occupants")
     private Integer maxOccupants;
 
-    public Room(Integer blockID, String roomNumber, Integer floor, Integer maxOccupants) {
+    public Room(Integer blockID, String roomNumber, Integer maxOccupants) {
         this.blockID = blockID;
         this.roomNumber = roomNumber;
-        this.floor = floor;
         this.maxOccupants = maxOccupants;
     }
 }

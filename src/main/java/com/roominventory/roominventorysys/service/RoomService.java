@@ -32,7 +32,7 @@ public class RoomService {
     }
 
     @Transactional
-    public void updateRoom(Integer roomID, Integer blockID, String roomNumber, Integer floor, Integer maxOccupants) {
+    public void updateRoom(Integer roomID, Integer blockID, String roomNumber, Integer maxOccupants) {
         Room room = roomRepository.findById(roomID)
                 .orElseThrow(() -> new IllegalArgumentException("Room with id " + roomID + " does not exist"));
 
@@ -42,10 +42,6 @@ public class RoomService {
 
         if(roomNumber != null && !roomNumber.equals(room.getRoomNumber())) {
             room.setRoomNumber(roomNumber);
-        }
-
-        if(floor != null && !floor.equals(room.getFloor())) {
-            room.setFloor(floor);
         }
 
         if(maxOccupants != null && !maxOccupants.equals(room.getMaxOccupants())) {
