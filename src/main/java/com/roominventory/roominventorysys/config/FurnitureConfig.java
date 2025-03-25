@@ -14,7 +14,7 @@ import java.util.List;
 public class FurnitureConfig {
 
     @Bean
-    @Order(2)
+    @Order(4)
     CommandLineRunner initializeFurniture(FurnitureRepository furnitureRepository) {
         return args -> {
             if (furnitureRepository.count() == 0) {

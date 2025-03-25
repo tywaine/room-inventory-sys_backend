@@ -13,7 +13,7 @@ import java.util.*;
 public class RoomConfig {
 
     @Bean
-    @Order(1)
+    @Order(3)
     CommandLineRunner initializeRooms(RoomRepository roomRepository) {
         return args -> {
             if (roomRepository.count() == 0) {
@@ -44,7 +44,7 @@ public class RoomConfig {
                 System.out.println("Default room data initialized successfully.");
             }
             else {
-                System.out.println("Rooms already exist. Skipping initialization.");
+                System.out.println("Room table already populated. Skipping initialization.");
             }
         };
     }

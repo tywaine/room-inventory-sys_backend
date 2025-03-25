@@ -15,7 +15,7 @@ public class OccupantConfig {
 
     /*
     @Bean
-    @Order(2)
+    @Order(5)
     CommandLineRunner initializeOccupants(OccupantRepository occupantRepository) {
         return args -> {
             if (occupantRepository.count() == 0) {
